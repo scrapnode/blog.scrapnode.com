@@ -83,7 +83,7 @@ Both [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Podm
 
 ## VIM
 
-Yes! [VIM](https://www.vim.org/) will help you a lots in any task that need performing on your server. At least you should know which I list bellow
+Yes! [VIM](https://www.vim.org/) will help you a lots in any task that need performing on your server. Here is the list of useful commands you should know
 
 - Move a line up or down
 - Copy/pass a line
