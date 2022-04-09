@@ -2,4 +2,4 @@
 
 > Tell you a story of the nerd, how did I work and what can I can do
 
-Visit [Tuan Nguyen's blog](blog.scrapnode.com) to read the latest post!
+Visit [Tuan Nguyen's blog](https://blog.scrapnode.com) to read the latest post!
