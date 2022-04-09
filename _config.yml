@@ -8,8 +8,6 @@ color_scheme: light
 # ga_tracking: UA-5555555-55
 # ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 
-logo: "/assets/img/logo/light/logo_64x64.png"
-
 aux_links:
   "Tuan Nguyen":
     - "//kubeplusplus.github.io/cv/"
@@ -32,7 +30,7 @@ plugins:
 # Define Jekyll collections
 collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
-  blogs:
+  articles:
     permalink: "/:collection/:path/"
     output: true
 
@@ -40,12 +38,6 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
-    blogs:
+    articles:
       # Give the collection a name
-      name: Blogs
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
-      nav_exclude: false
-      # Exclude the collection from the search
-      # Supports true or false (default)
-      search_exclude: false
+      name: Articles
