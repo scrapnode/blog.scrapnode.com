@@ -8,9 +8,9 @@ permalink: /
 
 # Tuan Nguyen
 
-Positions: Principal Engineer, DevOps Engineer, Backend Enginer
-Hobbies: Solutioning, playing Minecraft, playing LoL with my teammates, ...
-Hate: work like a minion
+- **Positions** Principal Engineer, DevOps Engineer, Backend Enginer
+- **Hobbies:** Solutioning, playing Minecraft, playing LoL with my teammates, ...
+- **Hate:** work like a minion
 
 ## Who am I?
 
