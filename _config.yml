@@ -1,0 +1,39 @@
+remote_theme: just-the-docs/just-the-docs
+# Color scheme supports "light" (default) and "dark"
+color_scheme: light
+
+# ga_tracking: UA-5555555-55
+# ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+
+logo: "/assets/img/logo/light/logo_64x64.png"
+
+aux_links:
+  "Tuan Nguyen":
+    - "//kubeplusplus.github.io/cv/"
+
+footer_content: "Copyright &copy; 2022 Tuan Nguyen."
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+gh_edit_link: false # show or hide edit this page link
+
+# Define Jekyll collections
+collections:
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  blogs:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    docs:
+      # Give the collection a name
+      name: Blogs
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
