@@ -60,13 +60,29 @@ But whenever I need to clone/pull/push to my company repository, I have to repla
 ```bash
 # Clone project
 # Before
-git clone git@*github.com*:company/project.git
+git clone git@github.com:company/project.git
 # After
-git clone git@**company.github.com**:company/project.git
+git clone git@company.github.com:company/project.git
 
 # Or add remote conf
 # Before
-git remote add origin git@*github.com*:company/project.git
+git remote add origin git@github.com:company/project.git
 # After
-git remote add origin git@**company.github.com**:company/project.git
+git remote add origin git@company.github.com:company/project.git
 ```
+
+## Container engine
+
+Both [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Podman](https://podman.io/) is fine. But I had been using Docker Desktop for more than 6 years so that why I will recommend it to my team.
+
+## VIM
+
+Yes! [VIM](https://www.vim.org/) will help you a lots in any task that need performing on your server. At least you should know which I list bellow
+
+- Move a line up or down
+- Copy/pass a line
+- Select/delete multiple words
+- Copy/pass a word
+- Go to the top/bottom of file
+- Delete all content of file
+- Search a word
