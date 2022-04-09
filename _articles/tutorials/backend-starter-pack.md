@@ -58,24 +58,23 @@ Let's say I want to clone a personal project that is under my username. I can cl
 But whenever I need to clone/pull/push to my company repository, I have to replace a part `github.com` with `company.github.com`. Please look at the example bellow to understand the idea clearer
 
 <div class="language-bash highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight">
-			<code>
-				<span class="c"># Clone project</span>
-				<span class="c"># Before</span>
-        git clone git@github.com:company/project.git
-    		<span class="c"># After</span>
-        git clone git@company.github.com:company/project.git
-
-        <span class="c"># Or add remote conf</span>
-        <span class="c"># Before</span>
-        git remote add origin git@github.com:company/project.git
-        <span class="c"># After</span>
-        git remote add origin git@company.github.com:company/project.git
-    		</code>
-    	</pre>
-
-  </div>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="c"># Clone project</span>
+<span class="c"># Before</span>
+git clone git@<span class=".text-red-300">github.com</span>:company/project.git
+<span class="c"># After</span>
+git clone git@<span class=".text-red-300">company.github.com</span>:company/project.git
+</br>
+<span class="c"># Or add remote conf</span>
+<span class="c"># Before</span>
+git remote add origin git@<span class=".text-red-300">github.com</span>:company/project.git
+<span class="c"># After</span>
+git remote add origin git@<span class=".text-red-300">company.github.com</span>:company/project.git
+</code>
+</pre>
+</div>
 </div>
 
 ## Container engine
