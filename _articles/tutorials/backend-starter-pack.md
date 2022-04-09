@@ -11,9 +11,14 @@ nav_order: 1
 
 Control your tools to get better development experiences and work faster.
 
-## TOC
-
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
 {:toc}
+</details>
 
 ## Terminal
 
