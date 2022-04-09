@@ -64,17 +64,17 @@ But whenever I need to clone/pull/push to my company repository, I have to repla
 <code>
 <span class="c"># Clone project</span>
 <span class="c"># Before</span>
-git clone git@<span class="text-red-300">github.com</span>:company/project.git
+git clone git@github.com:company/project.git
 <span class="c"># After</span>
-git clone git@<span class="text-red-300">company.github.com</span>:company/project.git
+git clone git@<span class="text-red-300">company</span>.github.com:company/project.git
 
-</br>
+<br>
 
 <span class="c"># Or add remote conf</span>
 <span class="c"># Before</span>
-git remote add origin git@<span class="text-red-300">github.com</span>:company/project.git
+git remote add origin git@github.com:company/project.git
 <span class="c"># After</span>
-git remote add origin git@<span class="text-red-300">company.github.com</span>:company/project.git
+git remote add origin git@<span class="text-red-300">company</span>.github.com:company/project.git
 </code>
 
 </pre>
