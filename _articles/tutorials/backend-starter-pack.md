@@ -61,6 +61,7 @@ But whenever I need to clone/pull/push to my company repository, I have to repla
 # Clone project
 # Before
 git clone git@github.com:company/project.git
+{: .text-red-300}
 # After
 git clone git@company.github.com:company/project.git
 
