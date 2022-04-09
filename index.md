@@ -9,6 +9,7 @@ permalink: /
 # Me
 
 Name: Tuan Nguyen
+
 Positions: Principal Engineer, DevOps Engineer, Backend Enginer
 
 ## Who am I?
