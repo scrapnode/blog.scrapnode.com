@@ -6,11 +6,11 @@ description: "Tell you a story of the nerd, how did I work and what can I do."
 permalink: /
 ---
 
-# Me
-
-Name: Tuan Nguyen
+# Tuan Nguyen
 
 Positions: Principal Engineer, DevOps Engineer, Backend Enginer
+Hobbies: Solutioning, playing Minecraft, playing LoL with my teammates, ...
+Hate: work like a minion
 
 ## Who am I?
 
