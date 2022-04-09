@@ -9,7 +9,7 @@ color_scheme: light
 # ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 
 aux_links:
-  "Tuan Nguyen":
+  "Résumé":
     - "//kubeplusplus.github.io/cv/"
 aux_links_new_tab: true
 
