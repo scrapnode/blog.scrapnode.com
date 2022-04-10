@@ -144,7 +144,7 @@ layout: table_wrappers
             {%- assign children_list = pages_list -%}
             {% for child in children_list %}
               <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.parent }} {{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                <a href="{{ child.url | absolute_url }}">{{ child.parent }} / {{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
               </li>
             {% endfor %}
           </ul>
