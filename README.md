@@ -1,6 +1,6 @@
--e # blog.scrapnode.com
+# blog.scrapnode.com
 
--e > Tell you a story of the nerd, how did I work and what can I can do
+> Tell you a story of the nerd, how did I work and what can I can do
 
 ## Who am I?
 
