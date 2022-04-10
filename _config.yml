@@ -2,7 +2,7 @@ title: Tuan's blog
 description: Tell you a story of the nerd, how did I work and what can I can do
 url: "https://blog.scrapnode.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-remote_theme: amitmerchant1990/reverie
+remote_theme: alshedivat/al-folio
 
 # Define Jekyll collections
 collections:
@@ -10,20 +10,3 @@ collections:
   articles:
     permalink: "/:collection/:path/"
     output: true
-
-# theme
-name: Tuan's blog
-author: Tuan Nguyen
-avatar: /assets/img/logo/avatar.png
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  email: tuan.nguyen930708@gmail.com
-  github: https://github.com/scrapnode/
-  linkedin: https://www.linkedin.com/in/tuannguyen1993/
-
-url: https://blog.scrapnode.com
-enforce_ssl: https://blog.scrapnode.com
-
-paginate: 20
-paginate_path: /page/:num/

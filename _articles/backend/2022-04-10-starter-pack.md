@@ -1,24 +1,12 @@
 ---
 layout: default
 title: Starter Pack
-parent: Tutorials
-nav_order: 1
+categories: [backend, tools]
 ---
 
 # Backend Starter Pack
 
-{: .no_toc }
-
 Control your tools to get better development experiences and work faster.
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 ## Terminal
 
@@ -57,25 +45,21 @@ Let's say I want to clone a personal project that is under my username. I can cl
 
 But whenever I need to clone/pull/push to my company repository, I have to replace a part `github.com` with `company.github.com`. Please look at the example bellow to understand the idea clearer
 
-<div class="language-bash highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>
-<span class="c"># Clone project</span>
-<span class="c"># Before</span>
+```bash
+# Clone project
+# ---
+# Before
 git clone git@github.com:company/project.git
-<span class="c"># After</span>
-git clone git@<span class="text-red-300">company</span>.github.com:company/project.git
-<br>
-<span class="c"># Or add remote conf</span>
-<span class="c"># Before</span>
+# After
+git clone git@company.github.com:company/project.git
+
+# Or config remote
+# ---
+# Before
 git remote add origin git@github.com:company/project.git
-<span class="c"># After</span>
-git remote add origin git@<span class="text-red-300">company</span>.github.com:company/project.git
-</code>
-</pre>
-</div>
-</div>
+# After
+git remote add origin git@company.github.com:company/project.git
+```
 
 ## Container engine
 
