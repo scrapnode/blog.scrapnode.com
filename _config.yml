@@ -6,9 +6,9 @@ collections:
   random:
     permalink: "/:collection/:path/"
     output: true
-  tutorials:
-    permalink: "/:collection/:path/"
-    output: true
+  # tutorials:
+  #   permalink: "/:collection/:path/"
+  #   output: true
 
 title: Tuan's blog
 description: Tell you a story of the nerd, how did I work and what can I can do
@@ -35,6 +35,6 @@ just_the_docs:
       # Give the collection a name
       name: Random
     # Reference the "docs" collection
-    tutorials:
-      # Give the collection a name
-      name: Tutorials
+    # tutorials:
+    #   # Give the collection a name
+    #   name: Tutorials
