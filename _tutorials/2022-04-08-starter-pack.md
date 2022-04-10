@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Starter Pack
 subtitle: Weapons that I has been using for a long time to fight for coding life
 nav_order: 1
