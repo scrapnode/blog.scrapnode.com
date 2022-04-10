@@ -2,7 +2,7 @@
 layout: default
 title: Random
 summary: Uncategorized posts, contains tips and tricks, mistakes and so on
-nav_order: 1
+nav_order: 2
 has_children: true
 ---
 
