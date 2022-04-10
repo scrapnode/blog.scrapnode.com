@@ -6,6 +6,9 @@ collections:
   backend:
     permalink: "/:collection/:path/"
     output: true
+  startup:
+    permalink: "/:collection/:path/"
+    output: true
 
 title: Tuan's blog
 description: Tell you a story of the nerd, how did I work and what can I can do
@@ -20,6 +23,7 @@ aux_links:
   "LinkedIn":
     - "//www.linkedin.com/in/tuannguyen1993/"
 
+footer_content: "Copyright &copy; 2022 Tuan Nguyen"
 last_edit_time_format: "%b %e %Y at %I:%M%p %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 gh_edit_link: false
 
@@ -29,4 +33,8 @@ just_the_docs:
     # Reference the "docs" collection
     backend:
       # Give the collection a name
-      name: Backend articles
+      name: Backend's articles
+    # Reference the "docs" collection
+    startup:
+      # Give the collection a name
+      name: Startup's articles

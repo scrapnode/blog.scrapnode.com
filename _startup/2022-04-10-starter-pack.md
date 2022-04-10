@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Starter Pack
-subtitle: Weapons that I had been using for a long time to fight for coding as a Backend Engineer
+subtitle: Resources to operate a startup as a Principal Engineer
 nav_order: 2
-parent: Backend
+parent: Startup
 ---
 
 ## Terminal
@@ -61,7 +61,7 @@ git remote add origin git@company.github.com:company/project.git
 
 ## Container engine
 
-Both [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Podman](https://podman.io/) is fine. But I had been using Docker Desktop for more than 6 years so that why I will recommend it to my team.
+Both [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Podman](https://podman.io/) is fine. But I has been using Docker Desktop for more than 6 years so that why I will recommend it to my team.
 
 ## VIM
 
