@@ -141,10 +141,10 @@ layout: table_wrappers
           <hr>
           <h2 class="text-delta">Table of contents: Tuan Nguyen</h2>
           <ul>
-            {%- assign children_list = pages_list | where: "parent", page.title -%}
+            {%- assign children_list = pages_list -%}
             {% for child in children_list %}
               <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                <a href="{{ child.url | absolute_url }}">{{ child.parent }} {{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
               </li>
             {% endfor %}
           </ul>

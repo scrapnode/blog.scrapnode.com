@@ -1,9 +1,13 @@
 ---
 layout: post
 title: Starter Pack
-subtitle: Weapons that I has been using for a long time to fight for coding life
+subtitle:
 nav_order: 1
 ---
+
+# Started Pack
+
+Weapons that I has been using for a long time to fight for coding life
 
 ## Terminal
 
