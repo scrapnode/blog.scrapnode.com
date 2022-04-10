@@ -2,31 +2,7 @@ title: Tuan's blog
 description: Tell you a story of the nerd, how did I work and what can I can do
 url: "https://blog.scrapnode.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-remote_theme: just-the-docs/just-the-docs
-# Color scheme supports "light" (default) and "dark"
-color_scheme: light
-
-# ga_tracking: UA-5555555-55
-# ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
-
-aux_links:
-  "Résumé":
-    - "//kubeplusplus.github.io/cv/"
-aux_links_new_tab: true
-
-nav_sort: case_insensitive
-
-back_to_top: true
-back_to_top_text: "Back to top"
-
-footer_content: "Copyright &copy; 2022 Tuan Nguyen."
-last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
-last_edit_time_format: "%b %e %Y at %I:%M %p %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
-
-gh_edit_link: false # show or hide edit this page link
-
-plugins:
-  - jekyll-seo-tag
+remote_theme: amitmerchant1990/reverie
 
 # Define Jekyll collections
 collections:
@@ -35,10 +11,19 @@ collections:
     permalink: "/:collection/:path/"
     output: true
 
-just_the_docs:
-  # Define which collections are used in just-the-docs
-  collections:
-    # Reference the "docs" collection
-    articles:
-      # Give the collection a name
-      name: Articles
+# theme
+name: Tuan's blog
+author: Tuan Nguyen
+avatar: /assets/img/logo/avatar.png
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  email: tuan.nguyen930708@gmail.com
+  github: https://github.com/scrapnode/
+  linkedin: https://www.linkedin.com/in/tuannguyen1993/
+
+url: https://blog.scrapnode.com
+enforce_ssl: https://blog.scrapnode.com
+
+paginate: 20
+paginate_path: /page/:num/
