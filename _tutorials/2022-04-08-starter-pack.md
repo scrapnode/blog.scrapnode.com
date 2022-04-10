@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Starter Pack
-subtitle:
+summary: Weapons that I has been using for a long time to fight for coding life
 nav_order: 1
 ---
 

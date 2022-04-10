@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Flushall suprise in Redis
+summary: A suprise I found when I tesed a Redis cluster configuration
 nav_order: 1
 parent: DevOps
 ---
