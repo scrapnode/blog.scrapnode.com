@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Starter Pack
-subtitle: Resources to operate a startup as a Principal Engineer
-nav_order: 2
-parent: Startup
+subtitle: Weapons that I has been using for a long time to fight for coding life
+nav_order: 1
+parent: Tutorials
 ---
 
 ## Terminal
