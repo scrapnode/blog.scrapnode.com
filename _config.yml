@@ -1,21 +1,34 @@
-remote_theme: "jeffreytse/jekyll-theme-yat"
+remote_theme: just-the-docs/just-the-docs
 
 # Define Jekyll collections
 collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
-  articles:
+  backend:
     permalink: "/:collection/:path/"
     defaults:
       layout: post
     output: true
 
 title: Tuan's blog
-email: tuan.nguyen930708@gmail.com
-author: Tuan Nguyen
 description: Tell you a story of the nerd, how did I work and what can I can do
 url: "https://blog.scrapnode.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-copyright: "Tuan Nguy 2022-{currentYear} {author}"
+# Theme configurations
+email: tuan.nguyen930708@gmail.com
+author: Tuan Nguyen
 
-sitemap: true
-paginate: 20
+aux_links_new_tab: true
+aux_links:
+  "LinkedIn":
+    - "//www.linkedin.com/in/tuannguyen1993/"
+
+last_edit_time_format: "%b %e %Y at %I:%M%p %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+gh_edit_link: false
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    backend:
+      # Give the collection a name
+      name: Backend articles
