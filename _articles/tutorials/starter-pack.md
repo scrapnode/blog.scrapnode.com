@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Backend Starter Pack
+title: Starter Pack
 parent: Tutorials
 nav_order: 1
 ---
