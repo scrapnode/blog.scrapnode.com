@@ -4,10 +4,10 @@ remote_theme: just-the-docs/just-the-docs
 collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
   random:
-    permalink: "/random/:path/"
+    permalink: "/collection/:collection/:path/"
     output: true
   tutorials:
-    permalink: "/tutorials/:path/"
+    permalink: "/collection/:collection/:path/"
     output: true
 
 title: Tuan's blog
