@@ -36,7 +36,7 @@ just_the_docs:
     random:
       # Give the collection a name
       name: Random
-    Reference the "docs" collection
+    # Reference the "docs" collection
     tutorials:
       # Give the collection a name
       name: Tutorials
