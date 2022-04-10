@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Tuan Nguyen's blog
+title: Home
 subtitle: Tell you a story of the nerd, how did I work and what can I can do
+permalink: /
 nav_order: 1
 ---
 

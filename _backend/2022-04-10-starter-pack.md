@@ -1,7 +1,8 @@
 ---
 title: Starter Pack
 subtitle: Weapons that I had been using for a long time to fight for coding as a Backend Engineer
-nav_order: 1
+nav_order: 2
+parent: Backend
 ---
 
 ## Terminal
