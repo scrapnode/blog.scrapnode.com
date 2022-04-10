@@ -3,7 +3,6 @@ layout: post
 title: Starter Pack
 subtitle: Weapons that I has been using for a long time to fight for coding life
 nav_order: 1
-parent: Tutorials
 ---
 
 ## Terminal
