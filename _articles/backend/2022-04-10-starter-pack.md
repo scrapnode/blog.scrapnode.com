@@ -1,12 +1,9 @@
 ---
-layout: default
 title: Starter Pack
-categories: [backend, tools]
+subtitle: Weapons that I had been using for a long time to fight for coding
+categories: backend
+tags: [tools]
 ---
-
-# Backend Starter Pack
-
-Control your tools to get better development experiences and work faster.
 
 ## Terminal
 

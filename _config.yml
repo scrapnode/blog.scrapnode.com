@@ -1,8 +1,4 @@
-remote_theme: alshedivat/al-folio
-
-title: Tuan's blog
-description: Tell you a story of the nerd, how did I work and what can I can do
-url: "https://blog.scrapnode.com" # the base hostname & protocol for your site, e.g. http://example.com
+remote_theme: "jeffreytse/jekyll-theme-yat"
 
 # Define Jekyll collections
 collections:
@@ -13,14 +9,13 @@ collections:
       layout: post
     output: true
 
-# Theme
-first_name: Tuan
-last_name: Nguyen
+title: Tuan's blog
 email: tuan.nguyen930708@gmail.com
-icon: avatar.png
+author: Tuan Nguyen
+description: Tell you a story of the nerd, how did I work and what can I can do
+url: "https://blog.scrapnode.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-github_username: scrapnode
-linkedin_username: tuannguyen1993
+copyright: "Tuan Nguy 2022-{currentYear} {author}"
 
-blog_name: Tuan's blog
-blog_description: Tell you a story of the nerd, how did I work and what can I can do
+sitemap: true
+paginate: 20
