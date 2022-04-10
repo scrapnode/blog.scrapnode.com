@@ -3,10 +3,10 @@ remote_theme: just-the-docs/just-the-docs
 # Define Jekyll collections
 collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
-  backend:
+  random:
     permalink: "/:collection/:path/"
     output: true
-  startup:
+  tutorials:
     permalink: "/:collection/:path/"
     output: true
 
@@ -31,10 +31,10 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
-    backend:
+    random:
       # Give the collection a name
-      name: Backend's articles
+      name: Random
     # Reference the "docs" collection
-    startup:
+    tutorials:
       # Give the collection a name
-      name: Startup's articles
+      name: Tutorials
