@@ -4,11 +4,11 @@ remote_theme: just-the-docs/just-the-docs
 collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
   random:
-    permalink: "/:collection/:path/"
+    permalink: "/random/:path/"
     output: true
-  # tutorials:
-  #   permalink: "/:collection/:path/"
-  #   output: true
+  tutorials:
+    permalink: "/tutorials/:path/"
+    output: true
 
 title: Tuan's blog
 description: Tell you a story of the nerd, how did I work and what can I can do
@@ -24,8 +24,10 @@ aux_links:
     - "//www.linkedin.com/in/tuannguyen1993/"
 
 footer_content: "Copyright &copy; 2022 Tuan Nguyen"
+last_edit_timestamp: true
 last_edit_time_format: "%b %e %Y at %I:%M%p %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 gh_edit_link: false
+back_to_top: true
 
 just_the_docs:
   # Define which collections are used in just-the-docs
@@ -34,7 +36,7 @@ just_the_docs:
     random:
       # Give the collection a name
       name: Random
-    # Reference the "docs" collection
-    # tutorials:
-    #   # Give the collection a name
-    #   name: Tutorials
+    Reference the "docs" collection
+    tutorials:
+      # Give the collection a name
+      name: Tutorials
