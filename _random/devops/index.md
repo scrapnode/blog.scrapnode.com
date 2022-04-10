@@ -8,4 +8,4 @@ has_children: true
 
 Stupid or interesting thing I discovered while doing DevOps task
 
-{:toc}
+- [2022-04-10-flushall-suprise-in-redis](/random/devops/2022-04-10-flushall-suprise-in-redis)
