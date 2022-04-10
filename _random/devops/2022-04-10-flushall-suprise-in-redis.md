@@ -2,7 +2,7 @@
 layout: post
 title: Flushall suprise in Redis
 subtitle: A suprise I found when I tesed a Redis cluster configuration
-nav_order: 1
+nav_order: 2
 parent: DevOps
 ---
 
