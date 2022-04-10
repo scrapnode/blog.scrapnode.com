@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Starter Pack
 subtitle: Weapons that I had been using for a long time to fight for coding as a Backend Engineer
 nav_order: 2

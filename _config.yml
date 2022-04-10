@@ -5,8 +5,6 @@ collections:
   # Define a collection named "docs", its documents reside in the "_docs" directory
   backend:
     permalink: "/:collection/:path/"
-    defaults:
-      layout: post
     output: true
 
 title: Tuan's blog
