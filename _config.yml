@@ -1,15 +1,5 @@
 remote_theme: just-the-docs/just-the-docs
 
-# Define Jekyll collections
-collections:
-  # Define a collection named "docs", its documents reside in the "_docs" directory
-  random:
-    permalink: "/collection/:collection/:path/"
-    output: true
-  tutorials:
-    permalink: "/collection/:collection/:path/"
-    output: true
-
 title: Tuan's blog
 description: Tell you a story of the nerd, how did I work and what can I can do
 url: "https://blog.scrapnode.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -28,15 +18,3 @@ last_edit_timestamp: true
 last_edit_time_format: "%b %e %Y at %I:%M%p %z" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 gh_edit_link: false
 back_to_top: true
-
-just_the_docs:
-  # Define which collections are used in just-the-docs
-  collections:
-    # Reference the "docs" collection
-    random:
-      # Give the collection a name
-      name: Random
-    # Reference the "docs" collection
-    tutorials:
-      # Give the collection a name
-      name: Tutorials
