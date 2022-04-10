@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Flushall suprise in Redis
 subtitle: A suprise I found when I tesed a Redis cluster configuration
 nav_order: 1
