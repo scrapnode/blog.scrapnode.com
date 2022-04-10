@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: default
 title: Starter Pack
 summary: Weapons that I has been using for a long time to fight for coding life
 nav_order: 1
+parent: Tutorials
 ---
 
 # Started Pack

@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: default
 title: Flushall suprise in Redis
 summary: A suprise I found when I tesed a Redis cluster configuration
 nav_order: 1
 parent: DevOps
+grand_parent: Random
 ---
 
 # Flushall suprise in Redis
