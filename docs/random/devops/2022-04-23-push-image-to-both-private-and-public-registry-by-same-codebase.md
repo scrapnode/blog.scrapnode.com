@@ -54,6 +54,8 @@ prepare:
 
 In another jobs, we have to make them depend on `preapre` step and check whether the check flag is true or not.
 
+{% raw %}
+
 ```yaml
 dockerhub:
   runs-on: ubuntu-latest
@@ -68,5 +70,7 @@ ecr:
   steps:
     - uses: actions/checkout@v1
 ```
+
+{% endraw %}
 
 If you set not only secrets `DOCKER_HUB_USERNAME` but `ECR_USERNAME`, both of your registry will received the update.
