@@ -29,24 +29,28 @@ The logic is simple, if a repository has a secret for ECR, CI should only run EC
 
 The main point is in `prepare` step. We have to do some check then decide which is the next action we should run. So my task is set the secret `DOCKER_HUB_USERNAME` on public repository and `ECR_USERNAME` on the private.
 
+{% raw %}
+
 ```yaml
 prepare:
   runs-on: ubuntu-latest
   outputs:
-    IS_DOCKERHUB: $\{{ steps.CHECK_DOCKERHUB.outputs.defined \}}
-    IS_ECR: $\{{ steps.CHECK_ECR.outputs.defined \}}
+    IS_DOCKERHUB: ${{ steps.CHECK_DOCKERHUB.outputs.defined }}
+    IS_ECR: ${{ steps.CHECK_ECR.outputs.defined }}
   steps:
     - id: CHECK_DOCKERHUB
       env:
-        DOCKER_HUB_USERNAME: $\{{ secrets.DOCKER_HUB_USERNAME \}}
-      if: "$\{{ env.DOCKER_HUB_USERNAME != '' \}}"
+        DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      if: "${{ env.DOCKER_HUB_USERNAME != '' }}"
       run: echo "::set-output name=defined::true"
     - id: CHECK_ECR
       env:
-        ECR_USERNAME: $\{{ secrets.ECR_USERNAME \}}
-      if: "$\{{ env.ECR_USERNAME != '' \}}"
+        ECR_USERNAME: ${{ secrets.ECR_USERNAME }}
+      if: "${{ env.ECR_USERNAME != '' }}"
       run: echo "::set-output name=defined::true"
 ```
+
+{% endraw %}
 
 In another jobs, we have to make them depend on `preapre` step and check whether the check flag is true or not.
 
@@ -54,13 +58,13 @@ In another jobs, we have to make them depend on `preapre` step and check whether
 dockerhub:
   runs-on: ubuntu-latest
   needs: [prepare]
-  if: $\{{ needs.prepare.outputs.IS_DOCKERHUB == 'true' \}}
+  if: ${{ needs.prepare.outputs.IS_DOCKERHUB == 'true' }}
   steps:
     - uses: actions/checkout@v1
 ecr:
   runs-on: ubuntu-latest
   needs: [prepare]
-  if: $\{{ needs.prepare.outputs.IS_ECR == 'true' \}}
+  if: ${{ needs.prepare.outputs.IS_ECR == 'true' }}
   steps:
     - uses: actions/checkout@v1
 ```
