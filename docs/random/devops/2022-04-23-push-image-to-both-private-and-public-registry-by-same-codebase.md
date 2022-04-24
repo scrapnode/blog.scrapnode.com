@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Flushall suprise in Redis
+title: Push image to both private and public registry by same codebase
 summary: How do we configure the CI that allow push image to different registry in different repository?
 date: 2022-04-23
 nav_order: 1
