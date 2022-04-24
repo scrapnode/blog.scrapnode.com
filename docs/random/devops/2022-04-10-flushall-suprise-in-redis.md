@@ -2,10 +2,10 @@
 layout: default
 title: Flushall suprise in Redis
 summary: A suprise I found when I tesed a Redis cluster configuration
+categoires: [devops, Redis]
 date: 2022-04-10
 nav_order: 1
-parent: DevOps
-grand_parent: Random
+parent: Random
 ---
 
 # Flushall suprise in Redis

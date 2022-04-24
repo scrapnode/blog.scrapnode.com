@@ -2,10 +2,10 @@
 layout: default
 title: Push image to both private and public registry by same codebase
 summary: How do we configure the CI that allow push image to different registry in different repository?
+categoires: [devops, CI, Docker]
 date: 2022-04-23
 nav_order: 1
-parent: DevOps
-grand_parent: Random
+parent: Random
 ---
 
 # Push image to both private and public registry
