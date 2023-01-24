@@ -14,36 +14,35 @@ lang: en
 
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: Asia/Ho_Chi_Minh
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: Tuan Nguyen Blog                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Tell you a story of a nerd, who is always curios about engineer things   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
-
+  I had been becoming a developer for 8 years, focus on backend and devops but can play almost role in a team. My ultimate goals are to design large-scaled system, grow a team and become a good mentor. Love to refresh myself every single day, always hungry to keep learning!
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://blog.scrapnode.com'
 
 github:
-  username: github_username             # change to your github username
+  username: scrapnode             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: ''            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com             # change to your email address
+  name: Tuan Nguyen
+  email: tuan.nguyen930708@gmail.com  # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://github.com/scrapnode       # change to your github homepage
+    # - https://twitter.com/username      # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -78,10 +77,10 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: 
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: '/assets/img/avatar.jpg'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
