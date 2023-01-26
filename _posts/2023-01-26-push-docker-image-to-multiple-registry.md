@@ -7,20 +7,20 @@ tags: [docker]
 
 ## Problem with Docker Registry
 
-I have managed a [GitOps workflow](https://www.weave.works/technologies/gitops/) with Github Action and FluxCD for 2 years. Erverything is fine until Docker announced [new rate limit](https://www.docker.com/blog/what-you-need-to-know-about-upcoming-docker-hub-rate-limiting/). There is the 2 important quotes:
+I have managed a [GitOps workflow](https://www.weave.works/technologies/gitops/) with Github Action and FluxCD for 3 years. Erverything is fine until Docker announced [new rate limit](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/) that will take effect November 1, 2020. There is the 2 important quotes:
 
-- `For anonymous users, the rate limit is set to 100 pulls per 6 hours per IP address`
-- `For authenticated users, it’s 200 pulls per 6 hour period`
+- `Free plan – anonymous users: 100 pulls per 6 hours `
+- `Free plan – authenticated users: 200 pulls per 6 hours`
 
-Because FluxCD use pulling model that check new image by an interval time, my GitOps workflow will not worked anymore because of the rate limit of Docker. I need to find out a new solution that let CICD works well again
+Because FluxCD use pulling model that checks new image by an interval time, so it does not work anymore because of new rate limit. I need to figure out a solution that lets current CICD workflow works well again
 
 ## Dead simple solution
 
-The solution is simple - push docker image to 2 diffrent registries (Docker Registry and another reigstry that has larger rate limit). I wil, push the stable build (tag by semantic version) to Docker Registry so everybody can use it easily. For the another registry (I am using [ECR](https://aws.amazon.com/ecr/)), I can push the latest code with anything I want to test and FluxCD will deploy it for me without any issue
+The solution is simple - push docker image to 2 diffrent registries: Docker Registry and another reigstry that has larger rate limit or no rate limit at all. So, I will push the stable build (tag by semantic version) to Docker Registry to let everybody use it easily. For another registry (I am using [ECR](https://aws.amazon.com/ecr/)), FluxCD will check new build every minute and deploy it if I have pushed the latest code on main branch `master`
 
 ## Implementation
 
-What we need here is 2 pipelines that run 2 different jobs to push 2 separate registry and some flags that let us know which pipline should be run (or we need to run both of them). Here is the architecture we need to accomplish
+What we need here is 2 pipelines that run 2 different jobs to push 2 separate registries and some flags that let us know which pipline should be run (or we will run both of them). Here is the architecture we need to accomplish
 
 ![multiple-registry-pipline](/assets/img/multiple-registry-pipline.png)
 
