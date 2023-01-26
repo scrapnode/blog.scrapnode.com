@@ -1,8 +1,8 @@
 ---
 title: New Year, New Journey
-date: 2022-01-22 20:00:00 +0700
+date: 2023-01-22 20:00:00 +0700
 categories: [Uncategorized]
-tags: [motivation]     # TAG names should always be lowercase
+tags: [motivation]
 ---
 
 Today is Third Day of Lunar New Year in Viet Nam, so I think it is a good time to start my blog. There are many motivation to make me get start a blog, but the most wanted things I want to achieve are:
