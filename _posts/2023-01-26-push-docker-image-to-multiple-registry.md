@@ -7,12 +7,12 @@ tags: [docker]
 
 ## Problem with Docker Registry
 
-I have managed a [GitOps workflow](https://www.weave.works/technologies/gitops/) with Github Action and FluxCD for 3 years. Erverything is fine until Docker announced [new rate limit](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/) that will take effect November 1, 2020. There is the 2 important quotes:
+I have been managing a [GitOps workflow](https://www.weave.works/technologies/gitops/) using Github Action and FluxCD for the past three years and everything has been running smoothy until Docker announced [new rate limit](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/) that took effect on November 1, 2020. There are two important quotes:
 
 - `Free plan – anonymous users: 100 pulls per 6 hours `
 - `Free plan – authenticated users: 200 pulls per 6 hours`
 
-Because FluxCD use pulling model that checks new image by an interval time, so it does not work anymore because of new rate limit. I need to figure out a solution that lets current CICD workflow works well again
+Due to FluxCD's pulling model, which checks for new image at an interval time, it no longer functions as a result of new rate limit. I need to figure out a solution that lets current CICD workflow function properly again. And I found it.
 
 ## Dead simple solution
 
@@ -24,11 +24,11 @@ What we need here is 2 pipelines that run 2 different jobs to push 2 separate re
 
 ![multiple-registry-pipline](/assets/img/multiple-registry-pipline.png)
 
-The `prepare` is the key step where we will check which pipline should we run (for example, I need to push image to DockerHub and ECR). The condition logic is simple:
+The `prepare` step is crucial which step we will check which pipline should we run (for example, I need to push image to DockerHub and ECR). The decision logic is straightforward:
 
-- If we have set `DOCKERHUB_USERNAME`, enable pipeline that push image to Docker Hub
-- If we have set `ECR_USERNAME`, enable ECR pipeline too
-- If we have set something else, enable corresponding pipeline as well
+- If the `DOCKERHUB_USERNAME` is set, the pipelien that pushes the image to Docker Hub will be enabled
+- If the `ECR_USERNAME` is set, the ECR pipeline will also be enabled
+- If another flag is set, the corresponding pipeline will be enabled
 
 {% raw %}
 ```yaml
@@ -52,7 +52,7 @@ prepare:
 ```
 {% endraw %}
 
-In each pipeline, you need to add a condition to let the pipeline of enabled flag run or be skipped. With Github Action it is too simple with the `if` condition in each job
+Each pipeline must have a condition to determine whether the pipeline should be executed or skipped, depending on value of the enabled flag. This is easily using an `if` condition in each job within Github Action
 
 {% raw %}
 ```yaml
@@ -76,12 +76,12 @@ ecr:
 
 ## Limitations
 
-If we need to run too many pipelines (> 2 pipelines), you can find there is resource wasting at the workflow I have showed you. Because we need to run seperated job for different registry, we end up with run docker build multiple time. You can improve it by run only one job, set the flag to environment variable and check it at the step of push image to registry. But you can not reuse pre-defined actions from Github Actions Marketplace. 
+If we need to run too many pipelines (> 2 pipelines), you can find there is resource wasting at the workflow I have shown you. Because we need to run seperated job for different registry, we end up with run docker build multiple time. You can improve it by run only one job, set the flag to environment variable and check it at the step of push image to registry. But you can not reuse pre-defined actions from Github Actions Marketplace. 
 
 In my case, they are [docker/build-push-action](https://github.com/docker/build-push-action) and [aws-actions/amazon-ecr-login](https://github.com/aws-actions/amazon-ecr-login)
 
 
-> Be careful when you decided to manage credentials of registry by yourself cause there is a risk to leak them at Github Action logs
+> Be cautious when you decided to manage credentials of registry by yourself cause there is a risk of them leaking in Github Action logs
 {: .prompt-warning }
 
 
