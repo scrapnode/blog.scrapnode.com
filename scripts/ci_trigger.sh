@@ -4,7 +4,7 @@ set -e
 NOW=$(date +%Y.%-m%d.%-H%M)
 echo -n "$NOW" > .version
 
-git add .version && git commit -m "ci($NOW): ✨🐛🚨"
+git add -f .version && git commit -m "ci($NOW): ✨🐛🚨"
 
 TARGET=${1:-origin}
 echo "---------------------------"
