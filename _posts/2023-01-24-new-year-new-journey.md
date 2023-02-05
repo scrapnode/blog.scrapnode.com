@@ -5,15 +5,15 @@ categories: [Uncategorized]
 tags: [motivation]
 ---
 
-Today is Third Day of Lunar New Year in Viet Nam, so I think it is a good time to start my blog. There are many motivation to make me get start a blog, but the most wanted things I want to achieve are:
+Today is the third day of Lunar New Year in Vietnam, and I think it is a good time to start my blog. There are many motivations to start a blog, but my most wanted things I want to achieve are:
 
-- Improve writing and speaking skills by write posts and record them
-- Put my tricks somewhere I can find it easily
-- Build up my brand by tell everybody who am I and what I have to deal with every day
+- Improving my writing and speaking skills by writing posts and recording them.
+- Storing my tricks in a place where I can easily access them.
+- Building up my brand by telling everyone who I am and what I deal with on a daily basis.
 
 ## Writing and speaking, the most important soft-skill I have to accomplish
 
-I have become Princial Engineer for 2 years and I realized I spent almost time to discuss with teams about their solutions and write down ticket description and documents as well. None of them are easy, they are complicated, not my favorite part in this industry and hard to do them good. I have tried to avoid them before but the more I stay away from them the more headache I got. So I decide to face to them, fight with them as a man and defeat them someday
+I have been a Principal Engineer for the past two years and I realized I spent almost all my time discussing with my team and writing ticket descriptions and documents. None of them are simple, they are complicated and not my favorite part in this industry. Despite my attempts to avoid them, the longer I avoided them, the more headaches I experienced. So I decided to face them, fight them, and someday I will defeat them.
 
 ## Place to archive my tricks
 
