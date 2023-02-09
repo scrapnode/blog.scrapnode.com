@@ -1,7 +1,7 @@
 ---
 title: Gitflow at a startup
 date: 2023-02-09 21:15:00 +0700
-categories: [Tools, Git]
+categories: [Mangement, Git]
 tags: [gitflow]
 ---
 
