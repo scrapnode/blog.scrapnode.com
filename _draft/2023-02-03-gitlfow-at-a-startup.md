@@ -59,3 +59,9 @@ Similarly, developers must first select a working branch (lets say it is `develo
 Hotfix branches are different story. They are using for critical problems that cannot be solved using the standard bug fixing workflow, as they require immediate action due to the bug being in production. Furthermore, the version contains the bug in production is often outdated compared to the `master` branch. Because of all of those reason, we need to create hotfix branches from the tag contains bug instead of from the `master` branch. For example, if there is a bug at version `v2022.1201.2030` and we have ticket `SH-371` for it, we must create a branch `hotfix/sh-371` from that version, fix the bug then deploy a new version `v2022.1202.330` by tag the branch `hotfix/sh-371`. If everything works well after the patch, we can merge the branch `hotfix/sh-371` into the `master` branch to keep the fix in main stream.
 
 ## Operations
+
+With various developer branches as we explained before, manual management is a nightmare where you have to deploy new code for multiple environments everytime the developers push their change. That means you need a good CI/CD workflow that help you automate every operations for all deployments. Here is the workflow we are using to manage our Gitflow
+
+1. Anytime the developers commit their code with the predefined hashtag to a development branch (for example `develop-one`), we will trigger a Github Action workflow for corresponding branch. That Github Action will build and push a new Docker image to Docker Registry
+2. Our CD platform will check for new image every five minutes and deploy the new images if it found a new one.
+3. After complete the deployment, the CD platform will send a notification to our Slack channel to let developers (both Backend and Frontend) know their deployment is finished. Then they can test their features or bug fixes on development environment   
