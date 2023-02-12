@@ -1,2 +1,2 @@
-# scrapnode/blog
-> Tell you a story of a nerd, who is always curios about engineer things
+# Tuan Nguyen Blog
+> Tell you a story about a nerd who is always curios about engineering things 
