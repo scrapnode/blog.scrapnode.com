@@ -21,10 +21,10 @@ timezone: Asia/Ho_Chi_Minh
 
 title: Tuan Nguyen Blog                          # the main title
 
-tagline: Tell you a story of a nerd, who is always curios about engineer things   # it will display as the sub-title
+tagline: Tell you a story about a nerd who is always curios about engineering things   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  I had been becoming a developer for 8 years, focus on backend and devops but can play almost role in a team. My ultimate goals are to design large-scaled system, grow a team and become a good mentor. Love to refresh myself every single day, always hungry to keep learning!
+  I have been a backend and devops developer for 8 years and have the versatility to play various roles within a team. My ultimate goals are to design large-scaled systems, lead team to success, and become an effective mentor. Love to refresh myself every single day, always hungry to keep learning!
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://blog.scrapnode.com'
 
