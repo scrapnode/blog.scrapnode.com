@@ -64,8 +64,14 @@ Hotfix branches are different story. They are using for critical problems that c
 
 ## Operations
 
-With various developer branches as previously mentioned, manual management can become challenging, especially when deploying new code to multiple environments everytime the developers push their changes. To make it easier, you need a solid CI/CD workflow to automateall deployment operations. Here is the workflow we are using to manage our Gitflow
+All of the workflows we have defined allow developers to work freely with their own branch and enviroment without worrying about messing up the main branch. Once they have finised their works, they can make a Pull Request to staging branch and wait for feedback from reviewers. The PR is kept open until we finalize the list of features or bug fixes for the next release. Then, Teach Leads for those items can merge corresponding PR in the order of list features or bug fixes, and the QA team can start testing the changes on the staging environment
 
-1. When the developer commits their code with a predefined hashtag to a development branch (e.g. `develop-one`), a Github Action workflow is triggered for the corresponding branch. This workflow builds and pusesh a new Docker image to the Image Registry
+## Automation
+
+With various developer branches as previously mentioned, manual management can become challenging, especially when deploying new code to multiple environments every time the developers push their changes. To make it easier, you need a robust CI/CD workflow to automate all deployment operations. Here is the workflow that we are use to manage our Gitflow processes
+
+1. When the developer commits their code with a predefined hashtag to a development branch (e.g. `develop-one`), a GitHub Action workflow is triggered for the corresponding branch. This workflow builds and pushes a new Docker image to the Image Registry
 2. Our CD platform checks for new images every five minutes and deploys them if a new image is found
-3. Upon sucessfull deployment, the CD platform sends a notification to our Slack channel, letting team members know their deployment is completed. They can then test their features or bug fixes in tha development environment   
+3. Upon successful deployment, the CD platform sends a notification to our Slack channel, letting team members know their deployment is completed. They can then test their features or bug fixes in the development environment
+
+Following my team usage, the CI/CD wokflow helps us deploy developer changes in only 15 minutes from the time they commit their changes.
