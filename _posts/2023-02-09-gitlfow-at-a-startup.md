@@ -15,9 +15,13 @@ Simpler requirement often leads to more complex implementations, which we have u
 We want to develop multiple features simultaneously and then chose which ones to release, while being able to change the release priority at any time.
 ```
 
-As a fast-growing startup, the developer team often receive change requests to align with our business goals. For example, we want to do R&D for feature A and implement a feature for one of our merchant and do a fix for a bug on production environment at the same time. We decide ship the fix first, then R&D feature then merchant feature at the end. Suddenly we need to deliver merchant feature first (or we dead) but the code structure is organize to deliver as the way we define before. Now we have to change it and that is the frustrating and painful part 
+As a fast-growing startup, the developer team frequently receives change requests to align with our business goals. For example, we want to do R&D for feature A, implement a feature for one of our big merchants and fix a bug on production environment simultaneously. Initially, We decided prioritize the bug fix, followed by the R&D works, and end with merchant feature. However, we suddenly received a request to deliver the merchant feature first (or we die). Unfortunately, our code structure was organized to deliver the features in the previously defined order. Now we have to change it and that is a frustrating and painful process. 
+
+To address these challenges, I have suggested a workflow that allows us develop and review our changes in multiple environments. This way, we can prioritize the order of feature releases when we are close to the deadline, and make any necessary changes without compromising the quality of out work.
 
 ## Definitions
+
+We need to take a look at some definitions to understand what we are working with. They are entities of Git Workflows and the naming convention of those entities
 
 ### Entities
 
@@ -64,4 +68,4 @@ With various developer branches as previously mentioned, manual management can b
 
 1. When the developer commits their code with a predefined hashtag to a development branch (e.g. `develop-one`), a Github Action workflow is triggered for the corresponding branch. This workflow builds and pusesh a new Docker image to the Image Registry
 2. Our CD platform checks for new images every five minutes and deploys them if a new image is found
-3. Upon sucessfull deployment, the CD platform sends a notification to our Slack channel, letting team members know their deployment is completed. They can then test their features or bug fixes in th development environment   
+3. Upon sucessfull deployment, the CD platform sends a notification to our Slack channel, letting team members know their deployment is completed. They can then test their features or bug fixes in tha development environment   
