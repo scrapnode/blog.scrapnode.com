@@ -16,3 +16,7 @@ Hello everyone, I am Tuan Nguyen, a Vietnamese developer. In this blog, I am see
 
 - Communication: Let's have a discussion about your issue, this will help me improve communication skills as an engineer and communication effective with others
 - Refining Communication: I may struggle to articulate my thoughts quickly in face-to-face conversation due to limitation in my vocabulary
+
+## How do you contact me?
+
+You can check my curriculum vitae at [Tuan Nguyen - Fullstack Developer](https://tuannguyen.scrapnode.com/)
