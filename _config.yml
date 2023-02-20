@@ -32,7 +32,7 @@ github:
   username: scrapnode             # change to your github username
 
 twitter:
-  username: ''            # change to your twitter username
+  username: buglungtung            # change to your twitter username
 
 social:
   # Change to your full name.
@@ -42,10 +42,10 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/scrapnode       # change to your github homepage
-    # - https://twitter.com/username      # change to your twitter homepage
+    - https://twitter.com/buglungtung     # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/tuannguyen1993
 
 google_site_verification:               # fill in to your verification string
 
@@ -53,7 +53,7 @@ google_site_verification:               # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id: G-3G9PDBFK43                 # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
