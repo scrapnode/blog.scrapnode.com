@@ -11,3 +11,7 @@ Almost every system has a dataflow that involves importing and exporting entitie
 - On the other hand, a feasibility-focused approach entails making some queries, transforming them in memory, then streaming the results to the client. However, the more items that need to be exported, the more memory is required
 
 Today, I want to introduce to everyone a solution that I have been using for a long time, which strikes a balance between performance and feasibility.
+
+## Implementation
+
+![export-workflow](/assets/img/2023-02-20-export-workflow.png)
