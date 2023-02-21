@@ -40,25 +40,25 @@ We need to clarify the types of git branches we have
 
 ## Workflows
 
-![gitflow](/assets/img/gitflow.png)
+![gitflow](/assets/img/2023-02-09-gitflow.png)
 
 Typically, we have three main workflows: one for new features, another for bug fixes and the last one for hotfix
 
 ### Feature branches
 
-![feature-branches](/assets/img/feature-branches.png)
+![feature-branches](/assets/img/2023-02-09-feature-branches.png)
 
 Developers need to select an unuse branch, make it their working branch, and synchronize it with the `master` branch. Next, they should create a new branch specific to their assigned ticket, using the ticket ID as the branch name. For example, if a developer want to implement new feature using the `develop-one` branch and they have ticket ID `SH-147`, they have to create a branch called `feature/sh-147` from `develop-one`. After complete their implementation on `feature/sh-147`, they have to merge it back into `develop-one` and continue working on other tickets.
 
 ### Bug fixes
 
-![fix-branches](/assets/img/fix-branches.png)
+![fix-branches](/assets/img/2023-02-09-fix-branches.png)
 
 Similarly, developers must first select a working branch (lets say it is `develop-two`), then create a new branch specificlly for the bug they are fixing. The branch name should be based on the ticket ID, such as `fix/sh-223`. After completing their work on the bug, the developers should merge the fix branch (`fix/sh-223`) back into the working branch and move on to other tickets.
 
 ### Hotfix
 
-![hotfix-branches](/assets/img/hotfix-branches.png)
+![hotfix-branches](/assets/img/2023-02-09-hotfix-branches.png)
 
 Hotfix branches are different story. They are using for critical problems that cannot be solved using the standard bug fixing workflow, as they require immediate action due to the bug being in production. Furthermore, the version contains the bug in production is often outdated compared to the `master` branch. Because of all of those reason, we need to create hotfix branches from the tag contains bug instead of from the `master` branch. For example, if there is a bug at version `v2022.1201.2030` and we have ticket `SH-371` for it, we must create a branch `hotfix/sh-371` from that version, fix the bug then deploy a new version `v2022.1202.330` by tag the branch `hotfix/sh-371`. If everything works well after the patch, we can merge the branch `hotfix/sh-371` into the `master` branch to keep the fix in main stream.
 
