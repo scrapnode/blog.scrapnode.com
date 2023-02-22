@@ -1,5 +1,5 @@
 ---
-title: The art of Emport
+title: The art of Export
 date: 2023-02-20 21:00:00 +0700
 categories: [Solutioning]
 tags: [dataflow]
@@ -44,4 +44,14 @@ As you can see in the diagram, we are using pull model to update task status in 
 
 Using the pull model with HTTP connections allow us to avoid the cost of real-time connections and reduces the server load during peak time with some tricks. For example, we can return the next delay time to inform the client to wait until that delay has passed before making another request.
 
-Idealy, I often use a concrete delay time, such as 5 seconds. But you can totally use an exponential formula to calculate your delay time. One of my favorite formula is `x + Math.log(Math.pow(2, n))` with `x` being the initial delay time (often 5s) and `n` being the numer of request you have made
+Idealy, I often use a concrete delay time, such as 5 seconds. But you can totally use an exponential formula to calculate your delay time. One of my favorite formula is `x + Math.log(Math.pow(2, n))` with `x` being the initial delay time (often 5s) and `n` being the numer of request you have made.
+
+## Technical decisions
+
+It's important to note that the choice of components in our system heavily depends on your current techstack. Therefore, I can't provide a one-size-fits-all solution. However, I can offer insights into our use case in the hope of inpsiring you.
+
+In terms of queuing, we decided to go with RabbitMQ due to its widespread usage and ease of deployment on various cloud providers. While we also considered [nats.io](https://nats.io/), RabbitMQ provided us with a safer choice for maintenance.
+
+For our database, we opted for Redis as it fits our use case with its speed and performance. Although we acknowledge the risk of data loss, we found that Redis allows us to recover lost task easily as the way I mentioned before.
+
+In conclusion, we hope that our experiences can be of help to you. Keep in mind that the best choice for your system will depend on your unique circumstances and requirements.
