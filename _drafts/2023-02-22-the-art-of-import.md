@@ -12,3 +12,13 @@ In previous blog post titled [The art of Export]({% post_url 2023-02-20-the-art-
 There is a diagram that describes the workflow of my solution, which consists of three parts. First, the client makes a request for an upload URL and an Import ID which they will use to upload their heavy file and check the task status later. Second, after the file is successfully uploaded, a trigger message is fired, and a worker will listen to that event. The worker has the responsibility to do every optimization to make the import as fast as posible and update the task's status into the database once the import is completed. Finally, the client repeatedly checks the task's status until it is completed (either succesfully or unsuccessfully).
 
 ![import-workflow](/assets/img/2023-02-22-import-workflow.png)
+
+### Request an import task
+
+In this step, the client makes a request ask for a pre-signed URL to upload their file and an import ID to check their task status. The pre-signed URL is a specific feature of cloud storage that limits what scopes can be performed with the given URL. For example, you can request a URL that is signed under your account with only two properties: content type and upload method, which restricts the scope of what can be uploaded to the URL. Any other combination of properties will be rejected to protect your URL. Once the client has the upload URL, they can upload their file and wait for the upload progress to be completed.
+
+### Trigger upload completed event
+
+Cloud storage services (i.e., AWS and GCP) often support event firing when a file is uploaded successfully. This makes it easy to automate the import process by listening to that event and triggering the import action. However, if your cloud storage does not support event firing, you have to require the client to call another API to inform the server that they have finished uploading the file. Then, the server can fire an event to let the worker know they can start carrying out the import action. Once import action is completed, the worker updates the task status in database so that the client can query it later.
+
+You can see how important good cloud storage is showed here. Without it, you have to deal with uploading large files when the connection is unstable, as well as dealing with event firing when something happens to that file. This would make your implementation more complex and difficult to maintain. Therefore, I strongly suggest that you choose a cloud storage and start using it. You may want to consider AWS S3, [min.io](https://min.io/) or [Backblaze](https://www.backblaze.com/).
