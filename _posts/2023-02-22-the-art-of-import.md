@@ -22,3 +22,15 @@ In this step, the client makes a request ask for a pre-signed URL to upload thei
 Cloud storage services (i.e., AWS and GCP) often support event firing when a file is uploaded successfully. This makes it easy to automate the import process by listening to that event and triggering the import action. However, if your cloud storage does not support event firing, you have to require the client to call another API to inform the server that they have finished uploading the file. Then, the server can fire an event to let the worker know they can start carrying out the import action. Once import action is completed, the worker updates the task status in database so that the client can query it later.
 
 You can see how important good cloud storage is showed here. Without it, you have to deal with uploading large files when the connection is unstable, as well as dealing with event firing when something happens to that file. This would make your implementation more complex and difficult to maintain. Therefore, I strongly suggest that you choose a cloud storage and start using it. You may want to consider AWS S3, [min.io](https://min.io/) or [Backblaze](https://www.backblaze.com/).
+
+### Checking task status
+
+We will use pulling model, as we did in [The art of Export]({% post_url 2023-02-20-the-art-of-export %}), to check status of the import task. The different lies in what the client receives after the task is successfully completed. Instead of receiving both task status and a URL in the response, the client is only receive the status. This mean the client only needs to inform the user that the import task is done, and it is safeto continue working with the imported data.
+
+## Technical decisions
+
+There aren not many technical decisions to consider regarding this topic since we have already chosen the most important component in this topic - storage. Therefore, I will only provide you with some storage providers to consider based on your use case
+
+- AWS S3 is reliable service that is widely known. It is easily to integrate into your system using various programming language without much hassle.
+- If you want to use the S3 API but with a lower price, then [min.io](https://min.io/) and [Backblaze](https://www.backblaze.com/) are other options worth considering.
+- If your infrastructure is heavily dependent on Google Cloud, the Google Cloud Storage is an excellent option to explore
