@@ -77,3 +77,7 @@ With various developer branches as previously mentioned, manual management can b
 3. Upon successful deployment, the CD platform sends a notification to our Slack channel, letting team members know their deployment is completed. They can then test their features or bug fixes in the development environment
 
 Following my team usage, the CI/CD wokflow helps us deploy developer changes in only 15 minutes from the time they commit their changes.
+
+## Results
+
+Prior to implementing our new workflow, we are only able to deliver a limited set of feature along with a few small bug fixes each week due to the constraints of our environments. It was frustrating not being able to test our feature early and make necessary changes promptly. However, that is all in the past now. With new workflow in place, we can deliver at a much faster pace, developing multiple features or patching bugs simultaneously across multiple environments. According to our report, we are now able to ship up to three features and eight bug fixes per week. This is truly remarkable progress of a small team like us.
