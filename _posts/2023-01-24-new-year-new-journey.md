@@ -5,8 +5,6 @@ categories: [Uncategorized]
 tags: [motivation]
 ---
 
-## Introduction
-
 Today is the third day of Lunar New Year in Vietnam, and I think it is a good time to start my blog. There are many motivations to start a blog, but my most wanted things I want to achieve are:
 
 - Improving my writing and speaking skills by writing posts and recording them.

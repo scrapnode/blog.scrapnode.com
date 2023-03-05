@@ -5,8 +5,6 @@ categories: [Git, Mangement]
 tags: [gitflow]
 ---
 
-## Introduction
-
 [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is a way you manage your Git branches. As a Princial Engineer in a startup, I have responsibility to make the flow suitable for business goals, straightforward for teammates (both tech and non-tech guys) and easy to maintain. It is hard but fortunately we figured it out.
 
 ## Requirement

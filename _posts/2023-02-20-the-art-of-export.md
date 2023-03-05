@@ -5,8 +5,6 @@ categories: [Solutioning]
 tags: [dataflow]
 ---
 
-## Introduction
-
 Almost every system has a dataflow that involves exporting entities for various purposes. Having worked with these systems for eight years, I have encountered a variety of ways to implement them, but none have made me entirely satisfied. Some are easy to implement, but they don't perform well at larger scales, while others are effective solutions that work well at any data size, but are not straightforward. For example
 
 - A performance-focused approach involves creating an export request and returning a task ID that allows the client to use a real-time connection to check the task status and download URL.

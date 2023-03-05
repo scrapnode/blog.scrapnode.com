@@ -5,8 +5,6 @@ categories: [DevOps, CICD]
 tags: [docker]
 ---
 
-## Problem with Docker Registry
-
 I have been managing a [GitOps workflow](https://www.weave.works/technologies/gitops/) using Github Action and FluxCD for the past three years and everything has been running smoothy until Docker announced [new rate limit](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/) that took effect on November 1, 2020. There are two important quotes:
 
 - `Free plan – anonymous users: 100 pulls per 6 hours `
