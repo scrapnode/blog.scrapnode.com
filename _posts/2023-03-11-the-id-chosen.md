@@ -16,7 +16,7 @@ The Auto-incremented ID is a feature offered by most SQL databases, where a valu
 ### Advantages
 
 - The size of ID column is small as it is just a number ([8 bytes for BIGINT](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html) compared to [255 bytes for VARCHAR(255)](https://dev.mysql.com/doc/refman/8.0/en/char.html))
-- The value of ID is reflected to the timestamp ordered. That making it useful for implementing cursor pagination, which requires a unique, orderable column
+- The value of ID is reflected to the timestamp order. That making it useful for implementing cursor pagination, which requires a unique, orderable column
 - The method is simple to implement since the database generates the value and ensures it is unique.
 
 ### Disadvantage
@@ -32,3 +32,35 @@ The UUID (Universally unique identifier) is another choice for primary column. I
 The advantages are straightforward: you have a unique ID that allows you to perform bulk modify queries with related records directly, and it is hard to conflict when generated on different nodes at the same time
 
 However, you lose the ability to use the ID column to implement cursor pagination, and the storage size is larger than the auto-incremented ID
+
+## The Snowflake ID
+
+After exploring both auto-incremented IDs and UUIDs, you may wonder if it's possible to generate unique IDs that reflect the order of creation based on timestamps, and do so easily in a distributed system. The answer is yes, thanks to the invention of the [Snowflake ID](https://en.wikipedia.org/wiki/Snowflake_ID) by Twitter. The Snowflake ID consists of two crucial parts: the first 41 bits represent a millisecond timestamp, and the last 10 bits represent a machine ID. Based on these parts, the order of the ID corresponds to the order of the record creation timestamps. With the Snowflake ID, you may have found the perfect ID for your system. However, you must maintain a unique set of machine IDs in your cluster, which can be challenging.
+
+
+## My perfect ID
+
+My chosen ID is [KSUID](https://github.com/segmentio/ksuid) because of
+
+- Naturally ordered by generation time
+- Collision-free, coordination-free, dependency-free
+- Highly portable representations
+
+There is a sample of KSUID which shows you the encoded timestamp inside it
+
+```bash
+$ ksuid -f inspect 0ujtsYcgvSTl8PAuAdqWYSMnLOv
+
+REPRESENTATION:
+
+  String: 0ujzPyRiIAffKhBux4PvQdDqMHY
+     Raw: 066A029C73FC1AA3B2446246D6E89FCD909E8FE8
+
+COMPONENTS:
+
+       Time: 2017-10-09 21:46:20 -0700 PDT
+  Timestamp: 107610780
+    Payload: 73FC1AA3B2446246D6E89FCD909E8FE8
+```
+
+However, there is a disadvantage to using Snowflake IDs: it is implemented in Golang and I was unable to find versions in other languages. Fortunately, this is not a problem for me since most of my new system is being written in Golang.
