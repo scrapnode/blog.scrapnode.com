@@ -44,7 +44,7 @@ WHERE p.active
 GROUP BY p.user_id;
 ``` 
 
-And I obtained the output in the format specified by [MySQL Explain Output]((https://dev.mysql.com/doc/refman/8.0/en/explain-output.html))
+And I obtained the output in the format specified by [MySQL Explain Output](https://dev.mysql.com/doc/refman/8.0/en/explain-output.html)
 
 ```json
 {
