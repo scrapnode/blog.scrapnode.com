@@ -19,7 +19,7 @@ WHERE p.active
 GROUP BY p.user_id;
 ```
 
-Almost immediately, I discovered that the query was executed on a non-indexed column, specifically either `p.user_id` or `p.active`. However, to my surprise, this time was different! I noticed that we already had an index on the `p.user_id` column, yet we were still examining over two million rows!
+Almost time, I will assume that the query was executed on a non-indexed column, specifically either `p.user_id` or `p.active`. However, to my surprise, this time was different! I noticed that we already had an index on the `p.user_id` column, yet we were still examining over two million rows!
 
 Ah, something unusual was happening. I quickly grabbed my coffee and began a more thorough investigation.
 
