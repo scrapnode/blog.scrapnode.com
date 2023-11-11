@@ -5,6 +5,8 @@ categories: [Git]
 tags: []
 ---
 
+Don't mess with your SSH key while working with multiple Git accounts. I faced the problem and eventually found a working solution.
+
 ## The problem
 
 As you know, we can specify the SSH key to be used when interacting with a remote repository. The configuration file is located at `~/.ssh/config`, with a format like this:
